@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Light Theme */
+    --BrightBlue: hsl(220, 98%, 61%);
+    --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --VeryGrayishBlue: hsl(236, 33%, 92%);
+    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --LigthGrayishBlue: hsl(236, 9%, 61%);
+    --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+    /* Dark Theme */
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue2: hsl(234, 39%, 85%);
+    --DarkGrayishBlue: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Josefin Sans", serif;
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+}
+
+.header-container {
+    width: 100%;
+    height: 30vh;
+    background-image: url("./assets/img/bg-mobile-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-container__title {
+    color: white;
+    font-family: "Josefin Sans", cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    margin-bottom: 30px;
+    line-height: 2rem;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.main-container {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.title-container {
+    display: grid;
+    grid-template-columns: repeat(2, 135px);
+    width: 100%;
+    height: 80%;
+}
+
+.icon {
+    font-size: 10px;
+    margin-left: 110px;
+}
+
+.main-container__todos {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.main__todos--input>input {
+    min-width: 270px;
+    max-width: 1000px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--VeryDarkDesaturatedBlue);
+}
+
+.main__todos--input .light-input {
+    background-color: var(--VeryLightGray);
+}
+
+.item.item-filter.light-filter {
+    background-color: var(--VeryLightGray);
+}
+
+input::placeholder {
+    padding: 20px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+.main-container__todos--items {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    height: auto;
+    margin-top: 15px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 32px 200px 38px;
+    align-items: center;
+    min-width: 270px;
+    max-width: 1000px;
+    height: 40px;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    color: var(--LightGrayishBlue2);
+    margin-top: 10px;
+}
+
+.item p {
+    margin-left: 10px;
+}
+
+.item a {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.complete span {
+    background-color: var(--BrightBlue);
+    background-image: url("./assets/img/icon-check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* .item:first-child {
+      border-radius  : 5px 5px 0 0;
+      text-decoration: line-through;
+  } */
+/* 
+  .item:last-child {
+      display        : flex;
+      justify-content: space-evenly;
+      border-radius  : 0 0 5px 5px;
+      color          : var(--DarkGrayishBlue);
+      font-size      : 1rem;
+  } */
+
+.item:last-child p {
+    cursor: pointer;
+}
+
+.item.item-filter {
+    display: flex;
+    border-radius: 5px;
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.item.item-filter>p:first-child {
+    color: hsl(220, 98%, 61%);
+}
+
+span.todo--delete {
+    background-image: url("./assets/img/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 20vh;
+}
+
+footer p {
+    color: var(--DarkGrayishBlue);
+}
+
+.completed {
+    color: green;
+}
+
+.light {
+    background-color: var(--VeryLightGray);
+}
+
+.form--light {
+    background-color: var(--VeryGrayishBlue);
+}
+
+
+/* Estilos adicionales */
+
+.error {
+    width: auto;
+    display: flex;
+    color: white;
+    background-color: red;
+    font-size: 1.5rem;
+}
+
+.error--mensaje {
+    font-size: 1.2rem;
+}
