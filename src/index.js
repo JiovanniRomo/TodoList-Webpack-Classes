@@ -22,25 +22,3 @@ function loadListeners() {
         console.log(todos);
     });
 }
-
-
-
-// function activeFilter() {
-
-//     filterTODOS = todos.filter(todo => todo.complete === false);
-
-//     loadHTML(filterTODOS);
-// }
-
-// function completedFilter() {
-
-//     filterTODOS = todos.filter(todo => todo.complete === true);
-//     loadHTML(filterTODOS);
-//     console.log(filterTODOS)
-// }
-
-// function clearCompleted() {
-//     todos = todos.filter(todo => todo.complete !== true);
-//     loadHTML();
-//     syncStorage();
-// }
