@@ -5,12 +5,10 @@ import { formTodo, todos } from './js/Variables';
 import './styles.css';
 
 
-//instancias
 export const ui = new UI();
 export const todosArr = new TodoList();
 
 
-//Listeners 
 loadListeners();
 function loadListeners() {
     formTodo.addEventListener('click', validarForm);

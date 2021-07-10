@@ -1,5 +1,4 @@
 import { ui } from "../../index";
-// import { syncStorage } from "../functiones/functions";
 import { todos } from "../Variables";
 
 class TodoList {

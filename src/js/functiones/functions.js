@@ -1,9 +1,6 @@
 import { todosArr, ui } from "../..";
 import TODO from '../Classes/TODO';
 
-// export function syncStorage(todos) {
-//     localStorage.setItem('todos', JSON.stringify(todos));
-// }
 
 export function validarForm(e) {
     e.preventDefault();

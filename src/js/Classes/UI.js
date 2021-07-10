@@ -1,4 +1,3 @@
-// import { syncStorage } from "../functiones/functions";
 import { mainContainer } from "../Variables";
 
 class UI {
