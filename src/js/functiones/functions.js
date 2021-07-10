@@ -21,16 +21,11 @@ export function validarForm(e) {
 export function agregarTodo(todoValue) {
     const todoObj = new TODO(todoValue);
 
-    // console.log(todoObj)
     todosArr.addTodo(todoObj);
-
-    // console.log(todosArr);
-    // const { todos } = todosArr;
 
 
     const formulario = document.querySelector('#formulario');
     formulario.reset();
 
-    // syncStorage();
 
 }

@@ -9,7 +9,6 @@ class TodoList {
 
     addTodo(todo) {
         this.todos = [...this.todos, todo];
-        // syncStorage();
 
         ui.loadHTML(this.todos);
     }
@@ -19,7 +18,6 @@ class TodoList {
             if (todo.id === id) {
                 if (todo.complete) {
                     todo.complete = false;
-                    // syncStorage();
                     return todo;
                 } else {
                     return todo;
@@ -28,13 +26,9 @@ class TodoList {
         })
     }
 
-    // sincronizarTodos(todos) {
-    //     this.todos = [this.todos, todos];
-    // }
 
     deleteTodo(id) {
         this.todos = todos.filter(todo => todo.id !== id);
-        // syncStorage();
     }
 
     todoCompleteFilter() {
@@ -45,7 +39,6 @@ class TodoList {
     clearCompletedTodo() {
         this.todos = this.todos.filter(todo => todo.complete === false);
         ui.loadHTML();
-        // syncStorage();
     }
 
 

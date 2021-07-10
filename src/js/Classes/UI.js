@@ -26,9 +26,6 @@ class UI {
     }
 
     loadHTML(todos) {
-
-        console.log(todos);
-
         this.clearHTML();
 
         todos.map(todo => {
@@ -58,7 +55,6 @@ class UI {
             mainContainer.appendChild(container);
         })
 
-        // syncStorage();
     }
 
     clearHTML() {
