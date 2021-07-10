@@ -16,9 +16,9 @@ function loadListeners() {
     formTodo.addEventListener('click', validarForm);
 
     document.addEventListener('DOMContentLoaded', () => {
-        todosArr.sincronizarTodos(JSON.parse(localStorage.getItem('todos')) || []);
+        // todosArr.sincronizarTodos(JSON.parse(localStorage.getItem('todos')) || []);
         ui.loadHTML(todos);
-        syncStorage();
+        // syncStorage();
         console.log(todos);
     });
 }

@@ -1,4 +1,4 @@
-import { syncStorage } from "../functiones/functions";
+// import { syncStorage } from "../functiones/functions";
 import { mainContainer } from "../Variables";
 
 class UI {
@@ -26,6 +26,8 @@ class UI {
     }
 
     loadHTML(todos) {
+
+        console.log(todos);
 
         this.clearHTML();
 
@@ -56,7 +58,7 @@ class UI {
             mainContainer.appendChild(container);
         })
 
-        syncStorage();
+        // syncStorage();
     }
 
     clearHTML() {

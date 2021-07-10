@@ -1,5 +1,5 @@
 import { ui } from "../../index";
-import { syncStorage } from "../functiones/functions";
+// import { syncStorage } from "../functiones/functions";
 import { todos } from "../Variables";
 
 class TodoList {
@@ -9,7 +9,7 @@ class TodoList {
 
     addTodo(todo) {
         this.todos = [...this.todos, todo];
-        syncStorage();
+        // syncStorage();
 
         ui.loadHTML(this.todos);
     }
@@ -19,7 +19,7 @@ class TodoList {
             if (todo.id === id) {
                 if (todo.complete) {
                     todo.complete = false;
-                    syncStorage();
+                    // syncStorage();
                     return todo;
                 } else {
                     return todo;
@@ -28,24 +28,24 @@ class TodoList {
         })
     }
 
-    sincronizarTodos(todos) {
-        this.todos = [this.todos, todos];
-    }
+    // sincronizarTodos(todos) {
+    //     this.todos = [this.todos, todos];
+    // }
 
     deleteTodo(id) {
         this.todos = todos.filter(todo => todo.id !== id);
-        syncStorage();
+        // syncStorage();
     }
 
     todoCompleteFilter() {
-        this.todos.filter(todo => todo.complete === true); 
-        ui.loadHTML()
+        this.todos.filter(todo => todo.complete === true);
+        ui.loadHTML();
     }
 
-    clearCompletedTodo () {
+    clearCompletedTodo() {
         this.todos = this.todos.filter(todo => todo.complete === false);
         ui.loadHTML();
-        syncStorage();
+        // syncStorage();
     }
 
 
