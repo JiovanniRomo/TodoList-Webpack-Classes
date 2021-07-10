@@ -1,6 +1,7 @@
 import { todosArr, ui } from "../..";
+import TODO from '../Classes/TODO';
 
-export function syncStorage() {
+export function syncStorage(todos) {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
@@ -31,6 +32,4 @@ export function agregarTodo(todo) {
 
     syncStorage();
 
-
-    ui.loadHTML(todos);
 }

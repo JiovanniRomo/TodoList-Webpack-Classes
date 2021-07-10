@@ -9,8 +9,9 @@ class TodoList {
 
     addTodo(todo) {
         this.todos = [...this.todos, todo];
-
         syncStorage();
+
+        ui.loadHTML(this.todos);
     }
 
     completeTodo(id) {
@@ -25,6 +26,10 @@ class TodoList {
                 }
             }
         })
+    }
+
+    sincronizarTodos(todos) {
+        this.todos = [this.todos, todos];
     }
 
     deleteTodo(id) {

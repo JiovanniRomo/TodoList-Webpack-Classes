@@ -16,7 +16,7 @@ function loadListeners() {
     formTodo.addEventListener('click', validarForm);
 
     document.addEventListener('DOMContentLoaded', () => {
-        todos = JSON.parse(localStorage.getItem('todos')) || [];
+        todosArr.sincronizarTodos(JSON.parse(localStorage.getItem('todos')) || []);
         ui.loadHTML(todos);
         syncStorage();
         console.log(todos);

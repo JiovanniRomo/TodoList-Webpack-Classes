@@ -1,3 +1,4 @@
+import { syncStorage } from "../functiones/functions";
 import { mainContainer } from "../Variables";
 
 class UI {
@@ -60,7 +61,7 @@ class UI {
 
     clearHTML() {
         while (mainContainer.firstChild) {
-            mainContainerner.removeChild(mainContainer.firstChild);
+            mainContainer.removeChild(mainContainer.firstChild);
         }
     }
 
